@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interactive Swagger UI for the public SL Cool Agent API.">
+  <link rel="icon" href="data:,">
+  <title>SL COOL API · Swagger UI</title>
+  <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5.11.10/swagger-ui.css">
+  <style>
+    body { margin: 0; background: #f5f7f6; color: #17282b; font-family: system-ui, sans-serif; }
+    header { display: flex; min-height: 62px; align-items: center; justify-content: space-between; gap: 16px; padding: 10px 24px; border-bottom: 1px solid #d9e0de; background: #fff; }
+    header strong { font-size: 14px; }
+    header a { color: #176d5b; font-size: 13px; font-weight: 650; text-decoration: none; }
+    header a:hover, header a:focus-visible { text-decoration: underline; }
+    #swagger-ui { max-width: 1440px; margin: 0 auto; }
+    .swagger-ui .topbar { display: none; }
+    @media (max-width: 600px) { header { align-items: flex-start; flex-direction: column; padding: 12px 16px; } }
+  </style>
+</head>
+<body>
+  <header><strong>SL COOL API · Swagger UI</strong><a href="./index.html">Back to API reference</a></header>
+  <main id="swagger-ui"></main>
+  <script src="https://unpkg.com/swagger-ui-dist@5.11.10/swagger-ui-bundle.js"></script>
+  <script src="https://unpkg.com/swagger-ui-dist@5.11.10/swagger-ui-standalone-preset.js"></script>
+  <script>
+    window.ui = SwaggerUIBundle({
+      url: './platform-stock-public.openapi.json',
+      dom_id: '#swagger-ui',
+      deepLinking: true,
+      displayRequestDuration: true,
+      tryItOutEnabled: false,
+      presets: [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset],
+      layout: 'StandaloneLayout'
+    });
+  </script>
+</body>
+</html>
