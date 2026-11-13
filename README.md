@@ -1,11 +1,10 @@
 # SL COOL API Reference Site
 
-Static documentation for the public SL Cool Agent API. The OpenAPI contract uses `https://open.sl.cool`; it excludes the SLConsole test backend and private stock-service integration routes.
+Static reference for the public SL Cool Agent and game APIs. The OpenAPI contract uses `https://open.sl.cool`; it excludes the SLConsole test backend and private service listener.
 
 ## Publish with GitHub Pages
 
 1. This site is maintained in https://github.com/SCI-SL/app-exchange-api.
-   Its repository is currently private; Pages availability depends on the organization plan.
 2. The repository root already contains the site, including `.github` and `.nojekyll`.
 3. Push the files to the `main` branch.
 4. In the repository, open **Settings → Pages** and select **GitHub Actions** as the build and deployment source.
@@ -27,14 +26,15 @@ Then open `http://localhost:8000`. Serving over HTTP is required because the doc
 
 ## Files
 
+- `API.md`: GitHub-readable reference with all endpoint parameters and examples.
 - `index.html`: Redoc API reference.
 - `swagger.html`: Swagger UI alternative; interactive requests are disabled by default.
-- `platform-stock-public.openapi.json`: the public API contract.
+- `platform-stock-public.openapi.json`: the public API contract (61 operations).
 - `.github/workflows/pages.yml`: deploys this directory's repository root to GitHub Pages.
 
 ## Update the API contract
 
-Replace `platform-stock-public.openapi.json` with the reviewed public specification, commit the change, push to `main`, and run the deployment workflow. Do not publish internal tokens, private service URLs, or test-backend endpoints.
+Update the OpenAPI contract and the matching endpoint details/examples in `API.md`, commit both, push to `main`, and run the deployment workflow. Do not publish internal tokens, private service URLs, or test-backend endpoints.
 
 ## Related CLI
 
